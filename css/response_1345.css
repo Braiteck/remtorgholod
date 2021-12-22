@@ -1,0 +1,269 @@
+@media (max-width: 1345px)
+{
+    /*---------------
+	    Main styles
+	---------------*/
+    .content_flex .content.mini
+    {
+        width: calc(100% - 360px);
+    }
+
+
+
+    .text_block .gallery .flex
+    {
+        --gallery_offset: 20px;
+    }
+
+
+
+    /*---------------
+		Header
+	---------------*/
+    header .links > * + *
+    {
+        margin-left: 25px;
+    }
+
+
+
+    /*---------------
+		Sidebar
+	---------------*/
+    aside .add_question .block_title
+    {
+        font-weight: 700;
+    }
+
+
+
+    aside .cart_total .promocode .title
+    {
+        position: relative;
+    }
+
+    aside .cart_total .tooltip
+    {
+        position: static;
+    }
+
+    aside .cart_total .tooltip .text,
+    aside .cart_total .tooltip:hover .text
+    {
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        min-height: 100%;
+
+        transform: none;
+    }
+
+    aside .cart_total .tooltip .text:before,
+    aside .cart_total .tooltip .text:after
+    {
+        display: none;
+    }
+
+
+
+    /*---------------
+		Main section
+	---------------*/
+    .promo_blocks .stats .info,
+    .promo_blocks .free_delivery .info
+    {
+        padding: 25px;
+    }
+
+
+
+    .cats_wall .cat .sub_cats
+    {
+        width: calc(100% - 110px);
+    }
+
+    .cats_wall .cat .thumb
+    {
+        width: 110px;
+    }
+
+
+
+    .advantages .item
+    {
+        padding: 25px;
+    }
+
+
+
+    .articles .cats .items
+    {
+        margin-left: -50px;
+    }
+
+    .articles .cats .items > *
+    {
+        margin-left: 50px;
+    }
+
+
+    .articles .flex
+    {
+        --articles_offset: 20px;
+    }
+
+
+
+    .checkout .block
+    {
+        padding: 20px 20px 1px 20px;
+    }
+
+    .checkout .form .line
+    {
+        margin-bottom: 19px;
+    }
+
+
+
+    .compare_info .product
+    {
+        padding: 15px 20px;
+    }
+
+
+
+    .lk_personal .form .block
+    {
+        padding: 20px 20px 1px 20px;
+    }
+
+    .lk_personal .form .line
+    {
+        margin-bottom: 19px;
+    }
+
+
+
+    .solution_head .text_block
+    {
+        width: calc(50% - 15px);
+    }
+
+
+
+    .solutions_promo .steps,
+    .solutions_promo .brands,
+    .solutions_promo .discounts
+    {
+        padding: 20px;
+    }
+
+    .solutions_promo .brands .flex
+    {
+        margin-bottom: -25px;
+        margin-left: -35px;
+    }
+
+    .solutions_promo .brands .flex > *
+    {
+        margin-bottom: 25px;
+        margin-left: 35px;
+    }
+
+    .solutions_promo .discounts .delivery
+    {
+        margin-bottom: 25px;
+    }
+
+
+
+    .solution_info .solution_name
+    {
+        font-size: 30px;
+        line-height: 32px;
+    }
+
+    .solution_info .buy
+    {
+        padding: 20px 25px;
+    }
+
+
+    .complect_info .total
+    {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .complect_info .total .economy
+    {
+        padding: 20px;
+    }
+
+    .complect_info .total .buy_link
+    {
+        left: 20px;
+
+        width: calc(100% - 40px);
+    }
+
+
+
+    .product_information .tabs_container
+    {
+        padding: 25px;
+    }
+
+    .product_information .tabs
+    {
+        margin-bottom: 25px;
+    }
+
+    .product_information .tabs a + a
+    {
+        margin-left: 50px;
+    }
+
+
+
+    .product_features
+    {
+        column-gap: 25px;
+    }
+
+
+
+    .product_reviews .add_review .cols,
+    .product_reviews .review .add_answer .cols
+    {
+        margin-left: -25px;
+    }
+
+    .product_reviews .add_review .cols .col,
+    .product_reviews .review .add_answer .cols .col
+    {
+        width: calc(40% - 25px);
+        margin-left: 25px;
+    }
+
+    .product_reviews .add_review .cols .col + .col,
+    .product_reviews .review .add_answer .cols .col + .col
+    {
+        width: calc(60% - 25px);
+        margin-left: 25px;
+    }
+
+
+
+    /*---------------
+		Footer
+	---------------*/
+
+
+
+    /*---------------
+		PopUp
+	---------------*/
+}
