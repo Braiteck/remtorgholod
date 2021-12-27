@@ -211,59 +211,57 @@
 
 
 
-    .product_information .tabs_container
+    .product_info .data
     {
-        padding: 25px;
-    }
-
-    .product_information .tabs
-    {
-        margin-bottom: 25px;
-    }
-
-    .product_information .tabs a + a
-    {
-        margin-left: 50px;
+        width: calc(100% - 550px);
     }
 
 
 
-    .product_features
+    .product_features .items
     {
-        column-gap: 25px;
+        column-gap: 160px;
     }
 
 
 
-    .product_reviews .add_review .cols,
-    .product_reviews .review .add_answer .cols
+    .calc .sections
     {
-        margin-left: -25px;
+        margin-bottom: -40px;
+        margin-left: -40px;
     }
 
-    .product_reviews .add_review .cols .col,
-    .product_reviews .review .add_answer .cols .col
+    .calc .sections > *
     {
-        width: calc(40% - 25px);
-        margin-left: 25px;
-    }
-
-    .product_reviews .add_review .cols .col + .col,
-    .product_reviews .review .add_answer .cols .col + .col
-    {
-        width: calc(60% - 25px);
-        margin-left: 25px;
+        width: calc(25% - 40px);
+        margin-bottom: 40px;
+        margin-left: 40px;
     }
 
 
+    .calc .sections .section + .section:before
+    {
+        left: -36px;
+    }
 
-    /*---------------
-		Footer
-	---------------*/
 
 
+    .our_projects .flex
+    {
+        margin-bottom: -40px;
+        margin-left: -32px;
+    }
 
-    /*---------------
-		PopUp
-	---------------*/
+    .our_projects .flex > *
+    {
+        width: calc(33.333% - 32px);
+        margin-bottom: 40px;
+        margin-left: 32px;
+    }
+
+
+    .our_projects .project .features .val
+    {
+        font-size: 17px;
+    }
 }

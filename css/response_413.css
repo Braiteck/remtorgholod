@@ -835,115 +835,44 @@
 
 
 
-    .product_info .images .stickers
+    .product_info .brand img
     {
-        top: 10px;
-        right: 10px;
-    }
-
-
-    .product_info .brand
-    {
-        height: 51px;
-    }
-
-    .product_info .product_name
-    {
-        font-size: 20px;
-        line-height: 24px;
-
-        margin-bottom: 15px;
-    }
-
-
-    .product_info .articul,
-    .product_info .status
-    {
-        margin-bottom: 10px;
-    }
-
-
-    .product_info .data .colors
-    {
-        flex-wrap: wrap;
-    }
-
-    .product_info .data .colors .name
-    {
-        width: 100%;
-        margin-bottom: 8px;
-        padding: 0;
+        max-width: 152px;
+        max-height: 48px;
     }
 
 
     .product_info .buy
     {
+        width: calc(100% + 20px);
+        max-width: calc(100% + 20px);
         margin-right: -10px;
         margin-left: -10px;
-        padding-right: 15px;
-    }
-
-    .product_info .product_price
-    {
-        margin-bottom: 10px;
-    }
-
-    .product_info .buy .bottom
-    {
-        margin-right: -15px;
-        padding: 15px;
-    }
-
-    .product_info .col_right .links
-    {
-        padding: 0 15px 15px;
+        padding: 20px 10px;
     }
 
 
 
-    .product_information .tabs_container
+    .product_reviews .add_review .submit_btn
     {
-        padding: 15px;
+        font-size: 14px;
+
+        width: auto;
     }
 
-    .product_information .tabs a
+    .product_reviews .add_review .exp
     {
-        margin-right: 25px;
-    }
+        font-size: 11px;
+        line-height: 15px;
 
-    .product_information .tabs a + a
-    {
-        margin-left: 0;
-    }
-
-
-
-    .product_reviews .add_review .rating
-    {
-        margin-bottom: 14px;
-    }
-
-    .product_reviews .add_review .rating .text_wrap
-    {
-        left: 123px;
+        width: calc(100% - 137px);
     }
 
 
 
-    .product_features .item
+    .product_special_offers .slider
     {
-        line-height: 16px;
-    }
-
-    .product_features .item .name > *
-    {
-        padding-right: 5px;
-    }
-
-    .product_features .item .val
-    {
-        min-width: 115px;
-        padding-left: 5px;
+        padding: 0 32px;
     }
 
 
@@ -1077,6 +1006,84 @@
 
 
 
+    .calc .block_title
+    {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+
+    .calc .ready_set
+    {
+        width: calc(100% + 20px);
+        max-width: calc(100% + 20px);
+        margin-right: -10px;
+        margin-left: -10px;
+        padding: 20px 10px;
+
+        border-radius: 0;
+    }
+
+
+    .calc .sections
+    {
+        width: calc(100% + 20px);
+        max-width: calc(100% + 20px);
+        margin-right: -10px;
+        margin-bottom: -40px;
+        margin-left: -10px;
+    }
+
+    .calc .sections > *
+    {
+        margin-bottom: 40px;
+    }
+
+
+    .calc .sections .section
+    {
+        border-radius: 0;
+    }
+
+    .calc .sections .section + .section:before
+    {
+        top: -26px;
+        right: 0;
+        bottom: auto;
+        left: 0;
+
+        display: block;
+
+        width: 24px;
+
+        transform: rotate(90deg);
+
+        background-position: 100% 50%;
+    }
+
+
+
+    .our_projects .block_title
+    {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+
+    .our_projects .project .features .name
+    {
+        line-height: 16px;
+
+        width: 100%;
+    }
+
+    .our_projects .project .features .val
+    {
+        width: 100%;
+    }
+
+
+
     /*---------------
         Footer
     ---------------*/
@@ -1175,6 +1182,12 @@
     #cart_modal
     {
         padding: 15px;
+    }
+
+    #order_modal + .fancybox-close-small
+    {
+        top: 8px;
+        right: 8px;
     }
 
     #cart_modal .cart_info .product .info

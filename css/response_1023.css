@@ -935,90 +935,248 @@
 
 
 
+    .product_info .product_name
+    {
+        font-size: 22px;
+        line-height: 28px;
+
+        margin-bottom: 16px;
+    }
+
+
+
+    .product_info .anchors
+    {
+        font-size: 0;
+
+        display: block;
+        overflow: auto;
+
+        width: calc(100% + 40px);
+        margin: 0 -20px;
+        padding: 0 20px;
+
+        white-space: nowrap;
+
+        scrollbar-color: transparent transparent !important;
+        scrollbar-width: thin !important;
+    }
+
+    .product_info .anchors::-webkit-scrollbar
+    {
+        width: 0 !important;
+        height: 0 !important;
+
+        background-color: transparent !important;
+    }
+
+    .product_info .anchors::-webkit-scrollbar-thumb
+    {
+        background-color: transparent !important;
+    }
+
+
+    .product_info .anchors > *
+    {
+        display: inline-block;
+
+        max-width: none;
+        margin: 0;
+
+        vertical-align: top;
+    }
+
+    .product_info .anchors > * + *
+    {
+        margin-left: 20px;
+    }
+
+
+
     .product_info .images
     {
-        margin-bottom: 20px;
+        width: 440px;
+        margin: 0 auto 24px;
     }
+
 
     .product_info .data
     {
         width: 100%;
     }
 
-    .product_info .product_name
-    {
-        margin-bottom: 20px;
-    }
-
-    .product_info .data .col_left
-    {
-        width: calc(100% - 360px);
-    }
-
-    .product_info .data .col_left .text_block,
-    .product_info .data .col_left .links
-    {
-        display: block;
-    }
-
-    .product_info .data .col_right
-    {
-        width: 340px;
-    }
-
 
     .product_info .buy
     {
-        padding-top: 20px;
-        padding-right: 20px;
+        padding: 24px 30px;
     }
 
-    .product_info .product_price
+    .product_info .buy .buy_link,
+    .product_info .buy .quike_buy_link
     {
-        margin-bottom: 20px;
+        padding: 0 15px;
     }
 
-    .product_info .buy .bottom
-    {
-        margin-top: 20px;
-        margin-right: -20px;
-        padding: 20px 20px 20px 50px;
-    }
 
     .product_info .col_right .links
     {
-        padding: 0 20px 0 50px;
+        margin-top: 20px;
+        padding: 0 30px;
     }
 
 
-
-    .product_information .tabs_container
+    .product_information aside
     {
-        padding: 20px;
+        display: flex;
+
+        width: calc(100% + 10px);
+        max-width: calc(100% + 10px);
+        margin-left: -10px;
+
+        justify-content: space-between;
+        align-items: stretch;
+        align-content: stretch;
+        flex-wrap: wrap;
     }
 
-    .product_information .tabs
+
+    .product_products
     {
-        margin-bottom: 20px;
+        width: calc(33.333% - 10px);
+        margin-left: 10px;
+    }
+
+    .product_products + .product_products
+    {
+        margin-top: 0;
     }
 
 
-
-    .product_features
+    .product_products .title
     {
-        column-gap: 20px;
+        font-size: 13px;
     }
 
-    .product_features > * + *
+
+    .product_products .product
     {
+        padding: 16px;
+    }
+
+    .product_products .product .compare_link
+    {
+        margin-right: 0;
+    }
+
+    .product_products .product .buy_link
+    {
+        width: 100%;
         margin-top: 10px;
+
+        text-align: center;
     }
 
 
 
-    .product_reviews .review + .review
+    .calc .selects
     {
-        margin-top: 25px;
+        margin-bottom: 24px;
+    }
+
+    .calc .selects .label
+    {
+        font-size: 13px;
+        line-height: 17px;
+    }
+
+    .calc .selects .nice-select .current
+    {
+        font-size: 13px;
+        line-height: 44px;
+
+        height: 44px;
+    }
+
+    .calc .selects .nice-select .list .list_item
+    {
+        font-size: 13px;
+        line-height: 17px;
+
+        padding: 14px 10px 12px;
+    }
+
+    .calc .selects .input
+    {
+        height: 44px;
+    }
+
+    .calc .selects .unit
+    {
+        line-height: 44px;
+
+        height: 44px;
+    }
+
+
+    .calc .ready_set
+    {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+
+
+    .calc .sections
+    {
+        margin-bottom: -24px;
+        margin-left: -24px;
+    }
+
+    .calc .sections > *
+    {
+        width: calc(50% - 24px);
+        margin-bottom: 24px;
+        margin-left: 24px;
+    }
+
+
+    .calc .sections .section
+    {
+        padding: 20px 30px;
+    }
+
+
+
+    .our_projects .filter .selects
+    {
+        margin-bottom: 24px;
+    }
+
+    .our_projects .filter .selects .label
+    {
+        font-size: 13px;
+        line-height: 17px;
+    }
+
+    .our_projects .filter .selects .nice-select .current
+    {
+        font-size: 13px;
+        line-height: 44px;
+
+        height: 44px;
+    }
+
+    .our_projects .filter .selects .nice-select .list .list_item
+    {
+        font-size: 13px;
+        line-height: 17px;
+
+        padding: 14px 10px 12px;
+    }
+
+
+    .our_projects .flex > *
+    {
+        width: calc(50% - 24px);
     }
 
 

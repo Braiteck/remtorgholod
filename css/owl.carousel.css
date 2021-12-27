@@ -391,37 +391,192 @@
 
 .images .owl-carousel .owl-nav button
 {
-    border: 1px solid rgba(136,152,171,.3);
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+
+    transition: .2s linear;
+
+    border: 1px solid #38bb3b;
+}
+
+.images .owl-carousel .owl-nav button:before
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 2px;
+
+    display: block;
+
+    width: 6px;
+    height: 6px;
+    margin: auto;
+
+    content: '';
+    transition: border-color .2s linear;
+    transform: rotate(-45deg);
+
+    border-top: 1px solid #38bb3b;
+    border-left: 1px solid #38bb3b;
 }
 
 .images .owl-carousel .owl-nav button.owl-prev
 {
-    left: 14px;
+    left: 0;
 
-    background-image: url(../images/ic_slider_prev.svg);
+    background: none;
 }
 
 .images .owl-carousel .owl-nav button.owl-next
 {
-    right: 14px;
+    right: 0;
 
-    background-image: url(../images/ic_slider_next.svg);
+    background: none;
+}
+
+.images .owl-carousel .owl-nav button.owl-next:before
+{
+    left: -2px;
+
+    transform: rotate(-225deg);
 }
 
 .images .owl-carousel .owl-nav button:hover
 {
-    border-color: #02599b;
-    background-color: #02599b;
+    background: #38bb3b;
 }
 
-.images .owl-carousel .owl-nav button.owl-prev:hover
+.images .owl-carousel .owl-nav button:hover:before
 {
-    background-image: url(../images/ic_slider_prev2.svg);
+    border-color: #fff;
 }
 
-.images .owl-carousel .owl-nav button.owl-next:hover
+
+
+.product_certs .owl-carousel .owl-nav button
 {
-    background-image: url(../images/ic_slider_next2.svg);
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+
+    border: 1px solid #38bb3b;
+}
+
+.product_certs .owl-carousel .owl-nav button:before
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 2px;
+
+    display: block;
+
+    width: 6px;
+    height: 6px;
+    margin: auto;
+
+    content: '';
+    transform: rotate(-45deg);
+
+    border-top: 1px solid #38bb3b;
+    border-left: 1px solid #38bb3b;
+}
+
+.product_certs .owl-carousel .owl-nav button.owl-prev
+{
+    left: 0;
+
+    background: none;
+}
+
+.product_certs .owl-carousel .owl-nav button.owl-next
+{
+    right: 0;
+
+    background: none;
+}
+
+.product_certs .owl-carousel .owl-nav button.owl-next:before
+{
+    left: -2px;
+
+    transform: rotate(-225deg);
+}
+
+.product_certs .owl-carousel .owl-nav button:hover
+{
+    background: #38bb3b;
+}
+
+.product_certs .owl-carousel .owl-nav button:hover:before
+{
+    border-color: #fff;
+}
+
+
+
+.product_special_offers .owl-carousel .owl-nav button
+{
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+
+    border: 1px solid #38bb3b;
+}
+
+.product_special_offers .owl-carousel .owl-nav button:before
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 2px;
+
+    display: block;
+
+    width: 6px;
+    height: 6px;
+    margin: auto;
+
+    content: '';
+    transform: rotate(-45deg);
+
+    border-top: 1px solid #38bb3b;
+    border-left: 1px solid #38bb3b;
+}
+
+.product_special_offers .owl-carousel .owl-nav button.owl-prev
+{
+    left: 0;
+
+    background: none;
+}
+
+.product_special_offers .owl-carousel .owl-nav button.owl-next
+{
+    right: 0;
+
+    background: none;
+}
+
+.product_special_offers .owl-carousel .owl-nav button.owl-next:before
+{
+    left: -2px;
+
+    transform: rotate(-225deg);
+}
+
+.product_special_offers .owl-carousel .owl-nav button:hover
+{
+    background: #38bb3b;
+}
+
+.product_special_offers .owl-carousel .owl-nav button:hover:before
+{
+    border-color: #fff;
 }
 
 
@@ -470,4 +625,35 @@
 .owl-dot.active
 {
     background: #fff;
+}
+
+
+
+.product_products .owl-dots
+{
+    bottom: 0;
+
+    height: 5px;
+}
+
+.product_products .owl-dot
+{
+    width: 5px;
+    height: 5px;
+
+    transition: background .2s linear;
+
+    border: 1px solid #02599b;
+    background: #02599b;
+}
+
+.product_products .owl-dot + .owl-dot
+{
+    margin-left: 10px;
+}
+
+.product_products .owl-dot:hover,
+.product_products .owl-dot.active
+{
+    background: none;
 }

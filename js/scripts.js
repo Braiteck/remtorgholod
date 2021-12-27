@@ -1,4 +1,4 @@
-$(function(){
+$(function () {
 	// Основной слайдер на главной
 	$('.main_slider .slider').owlCarousel({
 		items: 1,
@@ -7,21 +7,21 @@ $(function(){
 		smartSpeed: 500,
 		autoplay: true,
 		autoplayTimeout: 5000,
-	    responsive : {
-	    	0 : {
-	    		nav: false,
-	    		dots: true
-		    },
-		    768 : {
-	    		nav: true,
-	    		dots: false
-		    }
+		responsive: {
+			0: {
+				nav: false,
+				dots: true
+			},
+			768: {
+				nav: true,
+				dots: false
+			}
 		}
 	})
 
 
 	// Карусель товаров
-	$('.products:not(.stocks) .slider').owlCarousel({
+	$('.products:not(.stocks, .product_products) .slider').owlCarousel({
 		loop: false,
 		nav: true,
 		dots: false,
@@ -29,32 +29,32 @@ $(function(){
 		mouseDrag: false,
 		margin: 5,
 		responsive: {
-	        0:{
-	            items: 1
-	        },
-	        414:{
-	            items: 2
-	        },
-	        768:{
-	            items: 3
-	        },
-	        1024:{
-	            items: 4
-	        },
-	        1280:{
-	            items: 5
-	        }
+			0: {
+				items: 1
+			},
+			414: {
+				items: 2
+			},
+			768: {
+				items: 3
+			},
+			1024: {
+				items: 4
+			},
+			1280: {
+				items: 5
+			}
 		},
-		onInitialized: function(event){
-			setHeight( $(event.target).find('.product .name') )
-			setHeight( $(event.target).find('.product .features') )
+		onInitialized: function (event) {
+			setHeight($(event.target).find('.product .name'))
+			setHeight($(event.target).find('.product .features'))
 		},
-		onResized: function(event){
+		onResized: function (event) {
 			$(event.target).find('.product .name').height('auto')
 			$(event.target).find('.product .features').height('auto')
 
-			setHeight( $(event.target).find('.product .name') )
-			setHeight( $(event.target).find('.product .features') )
+			setHeight($(event.target).find('.product .name'))
+			setHeight($(event.target).find('.product .features'))
 		}
 	})
 
@@ -70,30 +70,41 @@ $(function(){
 		items: 1,
 		autoplay: true,
 		autoplayTimeout: 3000,
-		onInitialized: function(event){
-			if( $(event.target).is(':visible') ) {
-				setHeight( $(event.target).find('.product .name') )
-				setHeight( $(event.target).find('.product .features') )
+		onInitialized: function (event) {
+			if ($(event.target).is(':visible')) {
+				setHeight($(event.target).find('.product .name'))
+				setHeight($(event.target).find('.product .features'))
 			}
 		},
-		onResized: function(event){
+		onResized: function (event) {
 			$(event.target).find('.product .name').height('auto')
 			$(event.target).find('.product .features').height('auto')
 
-			if( $(event.target).is(':visible') ) {
-				setHeight( $(event.target).find('.product .name') )
-				setHeight( $(event.target).find('.product .features') )
+			if ($(event.target).is(':visible')) {
+				setHeight($(event.target).find('.product .name'))
+				setHeight($(event.target).find('.product .features'))
 			}
 		},
-		onChanged: function(event){
+		onChanged: function (event) {
 			$(event.target).find('.product .name').height('auto')
 			$(event.target).find('.product .features').height('auto')
 
-			if( $(event.target).is(':visible') ) {
-				setHeight( $(event.target).find('.product .name') )
-				setHeight( $(event.target).find('.product .features') )
+			if ($(event.target).is(':visible')) {
+				setHeight($(event.target).find('.product .name'))
+				setHeight($(event.target).find('.product .features'))
 			}
 		}
+	})
+
+
+	// Карусель товаров товара
+	$('.products.product_products .slider').owlCarousel({
+		loop: true,
+		nav: false,
+		dots: true,
+		smartSpeed: 500,
+		margin: 10,
+		items: 1
 	})
 
 
@@ -105,32 +116,32 @@ $(function(){
 		smartSpeed: 500,
 		margin: 10,
 		responsive: {
-	        0:{
-	            items: 1
-	        },
-	        414:{
-	            items: 2
-	        },
-	        768:{
-	            items: 3
-	        },
-	        1024:{
-	            items: 4
-	        },
-	        1280:{
-	            items: 5
-	        },
-	        1345:{
-	            items: 6
-	        }
+			0: {
+				items: 1
+			},
+			414: {
+				items: 2
+			},
+			768: {
+				items: 3
+			},
+			1024: {
+				items: 4
+			},
+			1280: {
+				items: 5
+			},
+			1345: {
+				items: 6
+			}
 		},
-		onInitialized: function(event){
-			setHeight( $(event.target).find('.item') )
+		onInitialized: function (event) {
+			setHeight($(event.target).find('.item'))
 		},
-		onResized: function(event){
+		onResized: function (event) {
 			$(event.target).find('.item').height('auto')
 
-			setHeight( $(event.target).find('.item') )
+			setHeight($(event.target).find('.item'))
 		}
 	})
 
@@ -143,15 +154,15 @@ $(function(){
 		smartSpeed: 500,
 		margin: 10,
 		responsive: {
-	        0:{
-	            items: 1
-	        },
-	        768:{
-	            items: 2
-	        },
-	        1024:{
-	            items: 3
-	        }
+			0: {
+				items: 1
+			},
+			768: {
+				items: 2
+			},
+			1024: {
+				items: 3
+			}
 		}
 	})
 
@@ -163,30 +174,30 @@ $(function(){
 		dots: false,
 		smartSpeed: 500,
 		responsive: {
-	        0:{
-	            items: 2,
+			0: {
+				items: 2,
 				margin: 10
-	        },
-	        414:{
-	            items: 3,
+			},
+			414: {
+				items: 3,
 				margin: 10
-	        },
-	        768:{
-	            items: 4,
+			},
+			768: {
+				items: 4,
 				margin: 15
-	        },
-	        1024:{
-	            items: 5,
+			},
+			1024: {
+				items: 5,
 				margin: 15
-	        },
-	        1280:{
-	            items: 6,
+			},
+			1280: {
+				items: 6,
 				margin: 20
-	        },
-	        1345:{
-	            items: 6,
+			},
+			1345: {
+				items: 6,
 				margin: 25
-	        }
+			}
 		}
 	})
 
@@ -199,85 +210,80 @@ $(function(){
 		smartSpeed: 500,
 		margin: 10,
 		responsive: {
-	        0:{
-	            items: 1
-	        },
-	        414:{
-	            items: 2
-	        },
-	        1024:{
-	            items: 3
-	        }
+			0: {
+				items: 1
+			},
+			414: {
+				items: 2
+			},
+			1024: {
+				items: 3
+			}
 		}
 	})
 
 
-	// Карусель комплектов
-	$('.complect_info .slider').owlCarousel({
+	// Карусель сертификатов в товаре
+	$('.product_certs .slider').owlCarousel({
 		loop: false,
 		nav: true,
 		dots: false,
-		smartSpeed: 750,
-		margin: 10,
-		items: 1,
-		mouseDrag: false,
-		onInitialized: function(event){
-			if( $(event.target).is(':visible') ) {
-				setHeight( $(event.target).find('.product .name') )
-			}
-		},
-		onResized: function(event){
-			$(event.target).find('.product .name').height('auto')
-
-			if( $(event.target).is(':visible') ) {
-				setHeight( $(event.target).find('.product .name') )
-			}
-		},
-		onChanged: function(event){
-			$(event.target).find('.product .name').height('auto')
-
-			if( $(event.target).is(':visible') ) {
-				setTimeout(function(){
-					setHeight( $(event.target).find('.product .name') )
-				}, 100)
+		smartSpeed: 500,
+		responsive: {
+			0: {
+				items: 2,
+				margin: 10,
+				autoWidth: true
+			},
+			414: {
+				items: 2,
+				margin: 16,
+				autoWidth: true
+			},
+			768: {
+				items: 3,
+				margin: 20,
+				autoWidth: false
 			}
 		}
 	})
 
 
-	$('body').on('click', '.complect_info .product.variative', function(e) {
-		e.preventDefault()
-
-		let check = $(this).find('.check')
-
-		check.toggleClass('checked')
+	// Карусель спецпредложений
+	$('.product_special_offers .slider').owlCarousel({
+		loop: false,
+		nav: true,
+		dots: false,
+		smartSpeed: 500,
+		items: 1,
+		margin: 20
 	})
 
 
 	// Отправка формы
-	$('body').on('submit', '.register_modal form', function(e) {
+	$('body').on('submit', '.register_modal form', function (e) {
 		e.preventDefault()
 
 		$.fancybox.close()
 
 		$.fancybox.open({
-			src  : '#register_success_modal',
-			type : 'inline'
+			src: '#register_success_modal',
+			type: 'inline'
 		})
 	})
 
 
-	$('body').on('click', '.product .compare_link', function(e) {
+	$('body').on('click', '.product .compare_link', function (e) {
 		e.preventDefault()
 
-		if( !$(this).hasClass('active') ){
+		if (!$(this).hasClass('active')) {
 			$(this).addClass('active')
 
 			$.fancybox.close()
 
 			$.fancybox.open({
-				src  : '#compare_success_modal',
-				type : 'inline'
+				src: '#compare_success_modal',
+				type: 'inline'
 			})
 		} else {
 			$(this).removeClass('active')
@@ -286,38 +292,38 @@ $(function(){
 
 
 	// Боковая колонка - Категории
-	$('body').on('click', 'aside .cats .items a.sub_link', function(e) {
-    	e.preventDefault()
+	$('body').on('click', 'aside .cats .items a.sub_link', function (e) {
+		e.preventDefault()
 
-    	if( $(this).hasClass('active') ) {
+		if ($(this).hasClass('active')) {
 			$(this).removeClass('active').next().slideUp(300)
 		} else {
 			$(this).addClass('active').next().slideDown(300)
 		}
 	})
 
-	$('body').on('click', 'aside .cats .more a', function(e) {
-	    e.preventDefault()
+	$('body').on('click', 'aside .cats .more a', function (e) {
+		e.preventDefault()
 
-	    let parent = $(this).closest('.cats')
+		let parent = $(this).closest('.cats')
 
-	    if( $(this).hasClass('active') ) {
-	    	$(this).removeClass('active')
+		if ($(this).hasClass('active')) {
+			$(this).removeClass('active')
 
-	    	parent.find('.hide').slideUp(500)
-	    } else {
-	    	$(this).addClass('active')
+			parent.find('.hide').slideUp(500)
+		} else {
+			$(this).addClass('active')
 
-	    	parent.find('.hide').slideDown(500)
-	    }
+			parent.find('.hide').slideDown(500)
+		}
 	})
 
 
 	// Боковая колонка - Фильтр
-	$('body').on('click', 'aside .mob_filter_link', function(e) {
-    	e.preventDefault()
+	$('body').on('click', 'aside .mob_filter_link', function (e) {
+		e.preventDefault()
 
-    	if( $(this).hasClass('active') ) {
+		if ($(this).hasClass('active')) {
 			$(this).removeClass('active').next().slideUp(300)
 		} else {
 			$(this).addClass('active').next().slideDown(300)
@@ -325,10 +331,10 @@ $(function(){
 	})
 
 
-    $('body').on('click', 'aside .filter .item .name', function(e) {
-    	e.preventDefault()
+	$('body').on('click', 'aside .filter .item .name', function (e) {
+		e.preventDefault()
 
-    	if( $(this).hasClass('active') ) {
+		if ($(this).hasClass('active')) {
 			$(this).removeClass('active').next().slideUp(300)
 		} else {
 			$(this).addClass('active').next().slideDown(300)
@@ -336,96 +342,96 @@ $(function(){
 	})
 
 
-	$('body').on('click', 'aside .filter .more a', function(e) {
-	    e.preventDefault()
+	$('body').on('click', 'aside .filter .more a', function (e) {
+		e.preventDefault()
 
-	    let parent = $(this).closest('.data')
+		let parent = $(this).closest('.data')
 
-	    if( $(this).hasClass('active') ) {
-	    	$(this).removeClass('active')
+		if ($(this).hasClass('active')) {
+			$(this).removeClass('active')
 
-	    	parent.find('.hide').slideUp(500)
-	    } else {
-	    	$(this).addClass('active')
+			parent.find('.hide').slideUp(500)
+		} else {
+			$(this).addClass('active')
 
-	    	parent.find('.hide').slideDown(500)
-	    }
+			parent.find('.hide').slideDown(500)
+		}
 	})
 
 
 	$priceRange = $('.filter #price_range').ionRangeSlider({
-        type     : 'double',
-        min      : 0,
-        max      : 250000,
-        from     : 15000,
-        to       : 189000,
-        step     : 100,
-        onChange : function (data) {
-            $('.filter .price_range input.ot').val( data.from.toLocaleString() )
-            $('.filter .price_range input.do').val( data.to.toLocaleString() )
-        },
-        onFinish : function (data) {
-        	calcResult($('.filter .price_range'), 0)
-        }
-    }).data("ionRangeSlider")
+		type: 'double',
+		min: 0,
+		max: 250000,
+		from: 15000,
+		to: 189000,
+		step: 100,
+		onChange: function (data) {
+			$('.filter .price_range input.ot').val(data.from.toLocaleString())
+			$('.filter .price_range input.do').val(data.to.toLocaleString())
+		},
+		onFinish: function (data) {
+			calcResult($('.filter .price_range'), 0)
+		}
+	}).data("ionRangeSlider")
 
-    $('.filter .price_range .input').keyup(function() {
-        $priceRange.update({
-            from : parseInt( $('.filter .price_range input.ot').val().replace(/\s/g, '') ),
-            to : parseInt( $('.filter .price_range input.do').val().replace(/\s/g, '') )
-        })
+	$('.filter .price_range .input').keyup(function () {
+		$priceRange.update({
+			from: parseInt($('.filter .price_range input.ot').val().replace(/\s/g, '')),
+			to: parseInt($('.filter .price_range input.do').val().replace(/\s/g, ''))
+		})
 
-        calcResult($('.filter .price_range'), 0)
-    })
-
-
-    $temperatureRange = $('.filter #temperature_range').ionRangeSlider({
-        type     : 'double',
-        min      : -25,
-        max      : 25,
-        from     : -12,
-        to       : 23,
-        step     : 1,
-        onChange : function (data) {
-        	if(data.from > 0) {
-            	$('.filter .temperature_range input.ot').val( '+'+data.from )
-            } else {
-            	$('.filter .temperature_range input.ot').val( data.from )
-            }
-
-            if(data.to > 0) {
-            	$('.filter .temperature_range input.do').val( '+'+data.to )
-            } else {
-            	$('.filter .temperature_range input.do').val( data.to )
-            }
-        },
-        onFinish : function (data) {
-        	calcResult($('.filter .temperature_range'), 0)
-        }
-    }).data("ionRangeSlider")
-
-    $('.filter .temperature_range .input').keyup(function() {
-        $temperatureRange.update({
-            from : parseInt( $('.filter .temperature_range input.ot').val().replace(/\s/g, '') ),
-            to : parseInt( $('.filter .temperature_range input.do').val().replace(/\s/g, '') )
-        })
-
-        calcResult($('.filter .temperature_range'), 0)
-    })
+		calcResult($('.filter .price_range'), 0)
+	})
 
 
-    $('body').on('click', '.filter label', function(e) {
-    	calcResult($(this), -12)
+	$temperatureRange = $('.filter #temperature_range').ionRangeSlider({
+		type: 'double',
+		min: -25,
+		max: 25,
+		from: -12,
+		to: 23,
+		step: 1,
+		onChange: function (data) {
+			if (data.from > 0) {
+				$('.filter .temperature_range input.ot').val('+' + data.from)
+			} else {
+				$('.filter .temperature_range input.ot').val(data.from)
+			}
+
+			if (data.to > 0) {
+				$('.filter .temperature_range input.do').val('+' + data.to)
+			} else {
+				$('.filter .temperature_range input.do').val(data.to)
+			}
+		},
+		onFinish: function (data) {
+			calcResult($('.filter .temperature_range'), 0)
+		}
+	}).data("ionRangeSlider")
+
+	$('.filter .temperature_range .input').keyup(function () {
+		$temperatureRange.update({
+			from: parseInt($('.filter .temperature_range input.ot').val().replace(/\s/g, '')),
+			to: parseInt($('.filter .temperature_range input.do').val().replace(/\s/g, ''))
+		})
+
+		calcResult($('.filter .temperature_range'), 0)
+	})
+
+
+	$('body').on('click', '.filter label', function (e) {
+		calcResult($(this), -12)
 	})
 
 
 	// Личный кабинет - заказы
-    $('body').on('click', '.lk_orders .order .head', function(e) {
-    	e.preventDefault()
+	$('body').on('click', '.lk_orders .order .head', function (e) {
+		e.preventDefault()
 
-    	let parent = $(this).closest('.order')
+		let parent = $(this).closest('.order')
 
-    	if( parent.hasClass('active') ) {
+		if (parent.hasClass('active')) {
 			parent.removeClass('active')
 			parent.find('.data').slideUp(300)
 		} else {
@@ -435,50 +441,50 @@ $(function(){
 	})
 
 
-    // Личный кабинет - редактрование данных
-    $('body').on('click', '.lk_personal .form .edit_pass_link', function(e) {
-    	e.preventDefault()
+	// Личный кабинет - редактрование данных
+	$('body').on('click', '.lk_personal .form .edit_pass_link', function (e) {
+		e.preventDefault()
 
-    	let parent = $(this).closest('.edit_pass')
+		let parent = $(this).closest('.edit_pass')
 
-    	$(this).hide()
-    	parent.find('.fields').slideDown(300)
+		$(this).hide()
+		parent.find('.fields').slideDown(300)
 	})
 
 
-    $('body').on('keydown', '.form #yr_adres', function() {
-    	let coincides = $('.form .coincides input').prop('checked')
+	$('body').on('keydown', '.form #yr_adres', function () {
+		let coincides = $('.form .coincides input').prop('checked')
 
-    	if( coincides ) {
-    		let _self = $(this)
-    		let parent = _self.closest('.form')
-    		let factAdres = parent.find('#fact_adres')
+		if (coincides) {
+			let _self = $(this)
+			let parent = _self.closest('.form')
+			let factAdres = parent.find('#fact_adres')
 
-    		setTimeout(function(){
-    			let value = _self.val()
+			setTimeout(function () {
+				let value = _self.val()
 
-    			factAdres.val(value)
+				factAdres.val(value)
 
-    			if( value != '' ){
-    				factAdres.addClass('active')
-    			} else {
-    				factAdres.removeClass('active')
-    			}
-    		}, 10)
-    	}
+				if (value != '') {
+					factAdres.addClass('active')
+				} else {
+					factAdres.removeClass('active')
+				}
+			}, 10)
+		}
 	})
 
-	$('body').on('click', '.form .coincides label', function() {
-    	let parent = $(this).closest('.form')
-    	let yrAdres = parent.find('#yr_adres').val()
+	$('body').on('click', '.form .coincides label', function () {
+		let parent = $(this).closest('.form')
+		let yrAdres = parent.find('#yr_adres').val()
 
-		if( $(this).hasClass('active') ) {
+		if ($(this).hasClass('active')) {
 			$(this).removeClass('active')
 		} else {
 			$(this).addClass('active')
 			parent.find('#fact_adres').val(yrAdres)
 
-			if( yrAdres != '' ){
+			if (yrAdres != '') {
 				parent.find('#fact_adres').addClass('active')
 			}
 		}
@@ -486,25 +492,25 @@ $(function(){
 
 
 	// Оформление заказа
-    $('body').on('click', '.checkout .delivery_method label', function() {
-    	if( !$(this).hasClass('active') ) {
-    		$('.checkout .delivery_method label').removeClass('active')
-    		$(this).addClass('active')
+	$('body').on('click', '.checkout .delivery_method label', function () {
+		if (!$(this).hasClass('active')) {
+			$('.checkout .delivery_method label').removeClass('active')
+			$(this).addClass('active')
 
 			$('.checkout .delivery_method label .input').prop('disabled', true)
-	    	$('.checkout .delivery_method label select').prop('disabled', true)
+			$('.checkout .delivery_method label select').prop('disabled', true)
 
-	    	$(this).find('.input').prop('disabled', false)
-	    	$(this).find('select').prop('disabled', false).niceSelect('update')
+			$(this).find('.input').prop('disabled', false)
+			$(this).find('select').prop('disabled', false).niceSelect('update')
 		}
 	})
 
 
-	$('.checkout .form .type label').click(function() {
-	    let content = $(this).data('content')
+	$('.checkout .form .type label').click(function () {
+		let content = $(this).data('content')
 
-	    $('.checkout .form .type_content').hide()
-	    $('.checkout .form .type_content' + content).fadeIn(300)
+		$('.checkout .form .type_content').hide()
+		$('.checkout .form .type_content' + content).fadeIn(300)
 	})
 
 
@@ -517,79 +523,117 @@ $(function(){
 		dots: false,
 		nav: true,
 		smartSpeed: 500,
-	    onTranslate: function(event){
-	    	$('.solution_info .images .thumbs a').removeClass('active')
-	    	$('.solution_info .images .thumbs a:eq('+ event.item.index +')').addClass('active')
-	    }
+		onTranslate: function (event) {
+			$('.solution_info .images .thumbs a').removeClass('active')
+			$('.solution_info .images .thumbs a:eq(' + event.item.index + ')').addClass('active')
+		}
 	})
 
-	$('.solution_info .images .thumbs a').click(function(e) {
+	$('.solution_info .images .thumbs a').click(function (e) {
 		e.preventDefault()
 
 		$('.solution_info .images .thumbs a').removeClass('active')
 
-	    $solution_info.trigger('to.owl.carousel', $(this).data('slide-index'))
+		$solution_info.trigger('to.owl.carousel', $(this).data('slide-index'))
 
-	    $(this).addClass('active')
+		$(this).addClass('active')
 	})
 
 
 	// Карточка товара
 	$product_info = $('.product_info .images .big .slider').owlCarousel({
 		items: 1,
-		margin: 10,
+		margin: 20,
+		loop: false,
+		dots: false,
+		nav: false,
+		smartSpeed: 500,
+		onTranslate: function (event) {
+			$('.product_info .images .thumbs a').removeClass('active')
+			$('.product_info .images .thumbs a:eq(' + event.item.index + ')').addClass('active')
+		}
+	})
+
+	$product_info_thumbs = $('.product_info .images .thumbs .slider').owlCarousel({
 		loop: false,
 		dots: false,
 		nav: true,
 		smartSpeed: 500,
-	    onTranslate: function(event){
-	    	$('.product_info .images .thumbs a').removeClass('active')
-	    	$('.product_info .images .thumbs a:eq('+ event.item.index +')').addClass('active')
-	    }
+		responsive: {
+			0: {
+				items: 3,
+				margin: 20
+			},
+			768: {
+				items: 4,
+				margin: 20,
+			}
+		}
 	})
 
-	$('.product_info .images .thumbs a').click(function(e) {
+	$('.product_info .images .thumbs button').click(function (e) {
 		e.preventDefault()
 
-		$('.product_info .images .thumbs a').removeClass('active')
-
-	    $product_info.trigger('to.owl.carousel', $(this).data('slide-index'))
-
-	    $(this).addClass('active')
+		$product_info.trigger('to.owl.carousel', $(this).data('slide-index'))
 	})
 
 
 	// Отзывы
-	$('body').on('click', '.review .reply_link', function(e) {
-	    e.preventDefault()
+	$('body').on('click', '.review .reply_link', function (e) {
+		e.preventDefault()
 
-	    let parent = $(this).closest('.review')
+		let parent = $(this).closest('.review')
 
-	    if( $(this).hasClass('active') ) {
-	    	$(this).removeClass('active')
+		if ($(this).hasClass('active')) {
+			$(this).removeClass('active')
 
-	    	parent.find('.add_answer').slideUp(500)
-	    } else {
-	    	$(this).addClass('active')
+			parent.find('.add_answer').slideUp(500)
+		} else {
+			$(this).addClass('active')
 
-	    	parent.find('.add_answer').slideDown(500)
-	    }
+			parent.find('.add_answer').slideDown(500)
+		}
 	})
 
 
-	$('body').on('click', '.product_reviews .add_review_link', function(e) {
-	    e.preventDefault()
+	$('body').on('click', '.product_reviews .add_review_link', function (e) {
+		e.preventDefault()
 
-	    let parent = $(this).closest('.product_reviews')
+		let parent = $(this).closest('.product_reviews')
 
-	    $(this).hide()
-	    parent.find('.add_review').slideDown(500)
+		$(this).hide()
+		parent.find('.add_review').slideDown(500)
 	})
+
+
+	// Калькулятор - Готовые комплекты
+	$('.calc .ready_set .slider').owlCarousel({
+		items: 1,
+		margin: 20,
+		loop: true,
+		smartSpeed: 500,
+		nav: true,
+		dots: false
+	})
+
+
+	// Калькулятор - Отделка
+	$finishingRange = $('.calc #finishing_range').ionRangeSlider({
+		values: ['Косметич.', 'Капит.', 'VIP'],
+		from: 0
+	}).data("ionRangeSlider")
+
+
+	// Калькулятор - Аренда
+	$rentRange = $('.calc #rent_range').ionRangeSlider({
+		values: ['МО', 'ТТК', 'Центр'],
+		from: 0
+	}).data("ionRangeSlider")
 })
 
 
 
-$(window).load(function(){
+$(window).load(function () {
 	// Кастомный скролл
 	scrollInit()
 
@@ -600,7 +644,7 @@ $(window).load(function(){
 
 
 
-$(window).resize(function(){
+$(window).resize(function () {
 	// Выравнивание в товарах
 	productHeight(parseInt($('.products .flex').css('--products_count')))
 })
@@ -608,49 +652,49 @@ $(window).resize(function(){
 
 // Кастомный скролл
 function scrollInit() {
-	$('.custom_scroll').each(function(){
+	$('.custom_scroll').each(function () {
 		$(this).slimScroll({
-	        height: $(this).innerHeight(),
-	        position: 'right',
-		    railVisible: true,
-		    alwaysVisible: true,
-		    color: '#006ec2',
-	    	size: '4px',
-	    	distance: '0',
-	    	railColor: '#dce0e5',
-	    	railOpacity: 1
-	    })
+			height: $(this).innerHeight(),
+			position: 'right',
+			railVisible: true,
+			alwaysVisible: true,
+			color: '#006ec2',
+			size: '4px',
+			distance: '0',
+			railColor: '#dce0e5',
+			railOpacity: 1
+		})
 	})
 }
 
 
 // Выравнивание в товарах
-function productHeight(step){
+function productHeight(step) {
 	let start = 0
 	let finish = step
 
-	$('.products .flex').each(function(){
+	$('.products .flex').each(function () {
 		let products = $(this).find('.product')
 
 		products.find('.name').height('auto')
 		products.find('.features').height('auto')
 
-		for( let i = 0; i < products.length; i++ ){
+		for (let i = 0; i < products.length; i++) {
 			let obj = products.slice(start, finish).find('.name')
 			let obj2 = products.slice(start, finish).find('.features')
 
-			setHeight( obj )
-			setHeight( obj2 )
+			setHeight(obj)
+			setHeight(obj2)
 
-			start = start+step
-			finish = finish+step
+			start = start + step
+			finish = finish + step
 		}
 	})
 }
 
 
 // Фильтр
-function calcResult(el, offsetTop){
+function calcResult(el, offsetTop) {
 	$('.filter .result').hide()
 
 	let positionTop = el.offset().top - $('aside .filter').offset().top
@@ -658,7 +702,7 @@ function calcResult(el, offsetTop){
 	$('.filter .result').css('margin-top', 0)
 	$('.filter .result').css('top', positionTop)
 
-	if(offsetTop){
+	if (offsetTop) {
 		$('.filter .result').css('margin-top', offsetTop)
 	}
 
